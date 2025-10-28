@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Área do Administrador — Bom Jesus Presentes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --red-1:#b91010;
+        --red-2:#ff5a4d;
+      }
+      body{font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+      /* small shadow like the original */
+      .soft-card{box-shadow: 0 10px 24px rgba(0,0,0,0.08);}
+    </style>
+  </head>
+  <body class="min-h-screen bg-gray-50">
+
+    <!-- Header similar ao site -->
+    <header class="bg-gradient-to-r from-[var(--red-1)] to-[var(--red-2)] text-white shadow-md">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <!-- logo -->
+          <div class="w-12 h-12 rounded bg-white p-1 soft-card flex items-center justify-center">
+            <img src="https://github.com/Pedrochrispim7/projeto-site00/blob/main/Imagens/logon.jpg.png?raw=true" alt="Logo Bom Jesus" class="block" />
+          </div>
+          <h1 class="text-2xl font-extrabold">Bom Jesus Presentes</h1>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a href="#" class="hidden md:inline-block bg-white/90 text-[var(--red-1)] font-semibold py-2 px-4 rounded-full shadow">Loja na Shopee</a>
+          <a href="/admin" class="inline-block bg-white/90 text-[var(--red-1)] font-semibold py-2 px-4 rounded-full shadow">Área do Administrador</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content: left illustration + right login card -->
+    <main class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+      <!-- Visual/hero side: mostra o estilo do site com cards arredondados -->
+      <section class="space-y-6">
+        <div class="rounded-2xl bg-white soft-card p-6">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-xl overflow-hidden soft-card bg-gray-100 p-4">
+              <div class="h-40 bg-cover bg-center rounded-lg" style="background-image:url('https://images.unsplash.com/photo-1602524811261-6f9d7f6a2b1c?auto=format&fit=crop&w=800&q=60')"></div>
+              <h3 class="mt-4 text-red-600 font-bold">Imagem Nossa Senhora</h3>
+            </div>
+            <div class="rounded-xl overflow-hidden soft-card bg-gray-100 p-4">
+              <div class="h-40 bg-cover bg-center rounded-lg" style="background-image:url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=60')"></div>
+              <h3 class="mt-4 text-red-600 font-bold">Decoração religiosa</h3>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-gray-500">Estilo limpo, cantos arredondados e sombras suaves — combinando com a identidade visual da loja.</p>
+        </div>
+
+        <div class="rounded-2xl bg-white soft-card p-6 flex gap-4 items-center">
+          <div class="w-16 h-16 rounded-lg bg-white/80 flex items-center justify-center soft-card">
+            <img src="https://via.placeholder.com/48x48?text=♥" alt="Ícone"/>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-800">Design consistente</h4>
+            <p class="text-sm text-gray-500">Use cores, tipografia e espaçamento alinhados ao cabeçalho para uma experiência coesa.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Login card -->
+      <section class="flex items-center justify-center">
+        <div class="w-full max-w-md bg-white rounded-2xl soft-card p-8">
+          <h2 class="text-2xl font-extrabold text-gray-800 mb-1">Entrar na Área do ADM</h2>
+          <p class="text-sm text-gray-500 mb-6">Digite suas credenciais para acessar o painel administrativo.</p>
+
+          <form action="/admin/login.php" method="POST" class="space-y-4">  <!-- Mudei para .php assumindo que é o processador -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2" for="email">E‑mail</label>
+              <input id="email" name="email" type="email" required placeholder="seu@exemplo.com"
+                class="w-full rounded-lg border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--red-1)] transition" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2" for="senha">Senha</label>
+              <input id="senha" name="senha" type="password" required placeholder="••••••••"
+                class="w-full rounded-lg border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--red-1)] transition" />
+            </div>
+
+            <div class="flex items-center justify-between text-sm">
+              <label class="inline-flex items-center gap-2">
+                <input type="checkbox" name="remember" class="rounded text-[var(--red-1)] focus:ring-[var(--red-1)]">
+                <span>Manter conectado</span>
+              </label>
+              <a href="/admin/recuperar-senha.html" class="text-red-600 hover:underline">Esqueci a senha</a>  <!-- Atualize o href -->
+            </div>
+
+            <!-- CORREÇÃO: Removida a tag <a> ao redor do button -->
+            <button type="submit" class="w-full py-3 rounded-full font-semibold bg-gradient-to-r from-[var(--red-1)] to-[var(--red-2)] text-white shadow">Entrar</button>
+           
+            <div class="pt-3 text-center text-sm text-gray-500">
+              <span>Deseja voltar à loja?</span>
+              <a href="/" class="text-red-600 font-semibold ml-2">Ir para a loja</a>  <!-- Atualize o href para a raiz -->
+            </div>
+          </form>
+
+          <hr class="my-6" />
+
+          <div class="text-xs text-gray-400 text-center">Acesso restrito — apenas administradores.</div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-6 py-8 text-center text-sm text-gray-500">
+      © <span id="ano"></span> Bom Jesus Presentes — Todos os direitos reservados
+    </footer>
+
+    <script>
+      document.getElementById('ano').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

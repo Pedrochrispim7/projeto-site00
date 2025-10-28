@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bom Jesus Presentes</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-poppins">
+
+  <header class="hero-bg text-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+      <div class="flex items-center space-x-4 flex-shrink-0">
+        <img src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/logon.jpg.png"
+          alt="Logo Bom Jesus Presentes" class="w-12 h-12 object-contain" />
+        <h1 class="text-3xl font-bold tracking-wide whitespace-nowrap">Bom Jesus Presentes</h1>
+      </div>
+
+      <nav class="flex flex-wrap justify-center sm:justify-end gap-3 sm:gap-4 w-full sm:w-auto items-center relative">
+        <a href="https://shopee.com.br/bomjesuspresentesltda" target="_blank"
+          class="bg-white text-red-600 px-6 py-3 rounded-full font-semibold hover:bg-red-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+          Loja na Shopee
+        </a>
+
+        <button id="gearButton"
+          class="bg-white text-red-600 p-3 rounded-full hover:bg-red-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center">
+          <svg id="gearIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.591 1.042c1.527-.878 3.374.97 2.496 2.497a1.724 1.724 0 001.042 2.59c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.042 2.591c.878 1.527-.97 3.374-2.497 2.496a1.724 1.724 0 00-2.59 1.042c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.591-1.042c-1.527.878-3.374-.97-2.496-2.497a1.724 1.724 0 00-1.042-2.59c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.042-2.591c-.878-1.527.97-3.374 2.497-2.496.996.572 2.218.05 2.59-1.042z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </button>
+
+        <a href="login-admin.html" target="_blank" id="adminButton"
+          class="opacity-0 scale-95 translate-y-2 pointer-events-none bg-white text-red-600 px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 absolute right-0 top-14">
+          Área do Administrador
+        </a>
+      </nav>
+    </div>
+
+    <script>
+      const gearButton = document.getElementById('gearButton');
+      const gearIcon = document.getElementById('gearIcon');
+      const adminButton = document.getElementById('adminButton');
+      let visible = false;
+
+      gearButton.addEventListener('click', () => {
+        visible = !visible;
+
+        gearIcon.classList.add('rotate-180');
+        setTimeout(() => gearIcon.classList.remove('rotate-180'), 300);
+
+        if (visible) {
+          adminButton.classList.remove('opacity-0', 'scale-95', 'translate-y-2', 'pointer-events-none');
+          adminButton.classList.add('opacity-100', 'scale-100', 'translate-y-0');
+        } else {
+          adminButton.classList.add('opacity-0', 'scale-95', 'translate-y-2', 'pointer-events-none');
+          adminButton.classList.remove('opacity-100', 'scale-100', 'translate-y-0');
+        }
+      });
+    </script>
+  </header>
+
+
+  <main class="max-w-7xl mx-auto px-4 py-12 space-y-16">
+
+    <section aria-label="Catálogo de Produtos">
+      <h2 class="text-4xl font-bold text-center text-red-600 mb-12">Nossos Produtos</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+        <article class="product-card animate-fade-in">
+          <a href="https://shopee.com.br/Imagem-Nossa-Senhora-i.1573406403.23098854542" target="_blank"
+            rel="noopener noreferrer" class="block">
+            <img
+              src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/Nossa-Senhora-Branca-Preta.jpg"
+              alt="Imagem Nossa Senhora Aparecida Branca/Preta" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Nossa Senhora Aparecida Branca/Preta</h3>
+          </a>
+        </article>
+
+        <article class="product-card animate-fade-in">
+          <a href="https://shopee.com.br/Imagem-Nossa-Senhora-i.1573406403.22898859673" target="_blank"
+            rel="noopener noreferrer" class="block">
+            <img src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/Nossa-Senhora-Preta.jpg"
+              alt="Imagem Nossa Senhora Aparecida Preta" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Nossa Senhora Aparecida Preta</h3>
+          </a>
+        </article>
+
+        <article class="product-card animate-fade-in">
+          <a href="https://shopee.com.br/product/1573406403/22998858739" target="_blank" rel="noopener noreferrer"
+            class="block">
+            <img src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/Nossa-Senhora-Branca.jpg"
+              alt="Imagem Nossa Senhora Aparecida Branca" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Nossa Senhora Aparecida Branca</h3>
+          </a>
+        </article>
+
+        <article class="product-card animate-fade-in">
+          <a href="https://br.shp.ee/9ujRktz" target="_blank" rel="noopener noreferrer" class="block">
+            <img src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Nossa-senhora-azul.jpg"
+              alt="Imagem Nossa Senhora Aparecida Azul" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Nossa Senhora Aparecida Azul</h3>
+          </a>
+        </article>
+
+        <article class="product-card animate-fade-in">
+          <a href="https://br.shp.ee/njpWX8C" target="_blank" rel="noopener noreferrer" class="block">
+            <img src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/Nossa-Senhora-Rosa.jpg"
+              alt="Imagem Nossa Senhora Aparecida Rosa" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Nossa Senhora Aparecida Rosa</h3>
+          </a>
+        </article>
+
+        <article class="product-card animate-fade-in">
+          <a href="https://shopee.com.br/Imagem-Nossa-Senhora-Aparecida-i.1573406403.22794367441" target="_blank"
+            rel="noopener noreferrer" class="block">
+            <img
+              src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/nossa-senhora-preta-vermelha.jpg"
+              alt="Imagem Nossa Senhora Aparecida Italiana Preta/Vermelha" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Nossa Senhora Aparecida Italiana Preta/Vermelha</h3>
+          </a>
+        </article>
+
+        <article class="product-card animate-fade-in">
+          <a href="https://br.shp.ee/n32peD3" target="_blank" rel="noopener noreferrer" class="block">
+            <img src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/ITALIANA-AMARELA.jpg"
+              alt="Imagem Nossa Senhora Aparecida Italiana Amarela" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Nossa Senhora Aparecida Italiana Amarela</h3>
+          </a>
+        </article>
+
+        <article class="product-card animate-fade-in">
+          <a href="https://shopee.com.br/Imagem-Nossa-Senhora-Cobre-i.1573406403.23094358014" target="_blank"
+            rel="noopener noreferrer" class="block">
+            <img src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/nossa-senhora-cobre.jpg"
+              alt="Imagem Nossa Senhora Aparecida Cobre" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Nossa Senhora Aparecida Italiana Cobre</h3>
+          </a>
+        </article>
+
+        <article class="product-card animate-fade-in">
+          <a href="https://shopee.com.br/Imagem-Nossa-Senhora-Dourada" target="_blank" rel="noopener noreferrer"
+            class="block">
+            <img src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/nossa-senhora-dourada.jpg"
+              alt="Imagem Nossa Senhora Aparecida Dourada" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Nossa Senhora Aparecida Italiana Dourada</h3>
+          </a>
+        </article>
+
+        <article class="product-card animate-fade-in">
+          <a href="https://br.shp.ee/Eog1enw" target="_blank" rel="noopener noreferrer" class="block">
+            <img
+              src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/Italiana%20branca.jpg"
+              alt="Imagem Nossa Senhora Aparecida Italiana Branca" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Nossa Senhora Aparecida Italiana Branca</h3>
+          </a>
+        </article>
+
+        <article class="product-card animate-fade-in">
+          <a href="https://br.shp.ee/4KCr74P" target="_blank" rel="noopener noreferrer" class="block">
+            <img
+              src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/Italiana_Branca-Preta.jpg"
+              alt="Imagem Nossa Senhora Aparecida Italiana Branca/Preta" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Nossa Senhora Aparecida Italiana Branca/Preta</h3>
+          </a>
+        </article>
+
+        <article class="product-card animate-fade-in">
+          <a href="https://shopee.com.br/Imagem-Sagrada-Familia-i.1573406403.22298957492" target="_blank"
+            rel="noopener noreferrer" class="block">
+            <img
+              src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/SAGRADA-FAMILIA-BRANCA.jpg"
+              alt="Imagem Sagrada Família" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Sagrada Família</h3>
+          </a>
+        </article>
+
+        <article class="product-card animate-fade-in">
+          <a href="https://shopee.com.br/Imagem-Sagrada-Fam%C3%ADlia-i.1573406403.22294508941" target="_blank"
+            rel="noopener noreferrer" class="block">
+            <img
+              src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/sagrada-familia-cobre.jpg"
+              alt="Imagem Sagrada Família" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Sagrada Família</h3>
+          </a>
+        </article>
+
+        <article class="product-card animate-fade-in">
+          <a href="https://shopee.com.br/Imagem-Sagrada-Fam%C3%ADlia-i.1573406403.22398815756" target="_blank"
+            rel="noopener noreferrer" class="block">
+            <img src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/sagrada-familia-bege.jpg"
+              alt="Imagem Sagrada Família" class="product-image" loading="lazy" />
+            <h3 class="product-title">Imagem Sagrada Família</h3>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section-bg rounded-3xl p-12 text-center" aria-label="Sobre Nós">
+      <h2 class="text-4xl font-bold text-red-600 mb-6">Sobre Nós</h2>
+      <p class="text-xl mb-6 text-gray-700">
+        Somos uma loja recém-criada, dedicada a oferecer presentes especiais com carinho e qualidade para todas as suas celebrações.
+      </p>
+      <p class="text-lg mb-6 text-gray-600">
+        Siga-nos no Instagram:
+        <a href="https://www.instagram.com/bomjesuspresentes/" target="_blank" rel="noopener noreferrer"
+          class="text-red-600 font-semibold hover:underline">@bomjesuspresentes</a>
+      </p>
+      <figure class="flex justify-center">
+        <img src="https://raw.githubusercontent.com/Pedrochrispim7/projeto-site00/main/Imagens/Italiana%20branca.jpg"
+          alt="Imagem sobre nós" class="rounded-lg shadow-lg max-w-xs" loading="lazy" />
+      </figure>
+    </section>
+
+  </main>
+
+  <footer class="footer-bg text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <section>
+        <h3 class="text-2xl font-bold mb-4 border-b-2 border-white pb-2">Bom Jesus Presentes</h3>
+        <p>Oferecemos presentes únicos e especiais para todas as ocasiões. Qualidade e carinho em cada detalhe.</p>
+      </section>
+
+      <section>
+        <h3 class="text-2xl font-bold mb-4 border-b-2 border-white pb-2">Contato</h3>
+        <p>Email: bomjesuspresentesltda@gmail.com</p>
+        <p>Telefone: (12) 99191-3213</p>
+        <p>Instagram: <a href="https://www.instagram.com/bomjesuspresentes/" target="_blank" rel="noopener noreferrer"
+            class="font-semibold hover:underline">@bomjesuspresentes</a></p>
+      </section>
+
+      <section>
+        <h3 class="text-2xl font-bold mb-4 border-b-2 border-white pb-2">Siga-nos</h3>
+        <a href="https://www.instagram.com/bomjesuspresentes/" target="_blank" rel="noopener noreferrer"
+          class="nav-button">Instagram</a>
+      </section>
+    </div>
+    <div class="text-center mt-8 border-t border-gray-400 pt-6">
+      <p class="text-sm">© 2025 Bom Jesus Presentes. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+/* ========================= FONTES ========================= */
+body {
+  font-family: 'Poppins', sans-serif; /* Aplica a fonte Poppins para todo o site */
+}
+
+/* ========================= ANIMAÇÕES ========================= */
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out; /* Faz elementos aparecerem com transição suave */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;           /* Começa invisível */
+    transform: translateY(20px); /* Vem de baixo */
+  }
+  to {
+    opacity: 1;           /* Fica visível */
+    transform: translateY(0); /* Posição final */
+  }
+}
+
+/* ========================= CARDS DE PRODUTOS ========================= */
+.product-card {
+  background-color: white;                   /* Fundo branco */
+  border-radius: 1rem;                       /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  padding: 1rem;                             /* Espaçamento interno */
+  transition: all 0.5s ease;                 /* Transição suave ao passar o mouse */
+  cursor: pointer;                           /* Cursor muda para mãozinha */
+  transform-style: preserve-3d;             /* Permite rotação 3D */
+}
+
+.product-card:hover {
+  transform: scale(1.05) rotateY(2deg);     /* Amplia e rotaciona levemente */
+  box-shadow: 0 12px 20px rgba(179, 0, 0, 0.3); /* Sombra mais intensa */
+}
+
+/* ========================= IMAGENS DOS PRODUTOS ========================= */
+.product-image {
+  width: 100%;           /* Ocupa toda largura do card */
+  max-height: 16rem;     /* Limite de altura */
+  object-fit: contain;   /* Mantém proporção da imagem */
+  border-radius: 0.75rem; /* Bordas levemente arredondadas */
+  margin-bottom: 1rem;    /* Espaço entre imagem e título */
+  display: block;
+}
+
+/* ========================= TÍTULO DOS PRODUTOS ========================= */
+.product-title {
+  font-weight: 700;      /* Negrito */
+  font-size: 1.125rem;   /* Tamanho médio */
+  text-align: center;    /* Centralizado */
+  color: #b30000;        /* Vermelho escuro */
+}
+
+/* ========================= HEADER ========================= */
+.hero-bg {
+  background: linear-gradient(135deg, #b30000, #ff4d4d); /* Gradiente vermelho */
+}
+
+/* ========================= SEÇÃO SOBRE NÓS ========================= */
+.section-bg {
+  background: linear-gradient(to bottom, #f9f0f0, #ffffff); /* Gradiente suave branco/rosa */
+}
+
+/* ========================= RODAPÉ ========================= */
+.footer-bg {
+  background: linear-gradient(to top, #b30000, #cc0000); /* Gradiente vermelho escuro */
+}
+
+/* ========================= BOTÕES DE NAVEGAÇÃO ========================= */
+.nav-button {
+  display: inline-block;               /* Permite padding e largura automática */
+  text-align: center;                  /* Centraliza o texto */
+  text-decoration: none;               /* Remove sublinhado */
+  background-color: white;             /* Fundo branco */
+  color: #b30000;                      /* Texto vermelho escuro */
+  padding: 0.75rem 1.5rem;             /* Espaçamento interno */
+  border-radius: 9999px;               /* Botão totalmente arredondado */
+  font-weight: 600;                     /* Negrito médio */
+  box-shadow: 0 8px 15px rgba(179, 0, 0, 0.3); /* Sombra leve */
+  transition: all 0.3s ease;           /* Transição suave */
+  cursor: pointer;                      /* Mãozinha ao passar o mouse */
+  user-select: none;                    /* Não permite seleção de texto */
+  white-space: nowrap;                  /* Não quebra linha */
+}
+
+.nav-button:hover {
+  background-color: #ff4d4d;           /* Fundo vermelho no hover */
+  color: white;                         /* Texto branco no hover */
+  box-shadow: 0 12px 20px rgba(179, 0, 0, 0.6); /* Sombra mais intensa */
+  transform: scale(1.05);               /* Leve aumento do tamanho */
+}
